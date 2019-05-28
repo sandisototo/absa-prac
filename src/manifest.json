@@ -1,0 +1,10 @@
+{
+  "name": "ABSA Assesment with Angula 7",
+  "short_name": "absa-assesment-ng-7",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "icons": [],
+  "background_color": "#285DAB",
+  "theme_color": "#0090E3",
+  "orientation": "portrait"
+}

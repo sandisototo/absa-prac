@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-black">
+    <p class="navbar-brand">
+        Popular Movies
+    </p>
+</nav>
+<div class="container main">
+    <div class="row" *ngIf="_movies else loading">
+        <div class="col-xs-6 col-md-12 play">
+            <a href="#" *ngFor="let item of _movies;">
+                <img src="{{item.images.posterArt.url}}" alt="{{item.images.title}}">
+            </a>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <div>Loading...</div>
+    </ng-template>
+</div>

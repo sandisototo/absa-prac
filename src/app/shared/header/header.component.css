@@ -1,0 +1,27 @@
+.bg-blue {
+  background: #0188fe;
+  box-shadow: -1px 3px 15px 10px #0000006b;
+  z-index: 999999999;
+
+}
+
+nav a {
+  color:white!important;
+}
+
+button {
+  color: #fff;
+}
+
+ul {
+  display:inline-flex;
+  list-style:none;
+}
+
+.move {
+  position: relative;
+  top: 5px;
+  background: #1d1e22;
+  border-radius: 0px;
+  border: none;
+}

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~angular-notifier/styles';
+
+
+.main {
+    margin-top: 2rem;
+    margin-bottom:2rem;
+  }
+  .bg-black {
+    background: #414141;
+    box-shadow: 1px -4px 15px 10px #0000006b;
+} 
+
+.bg-black p {
+    color: #fff !important;
+}
+
+.tile :hover {
+    cursor: pointer;
+}
+.play {
+    padding: 0 !important;
+  }
+  .play img {
+    height: auto;
+    width: 100%;
+  }
+  @media (min-width: 481px)  { .play img { width: 50%; } }
+  @media (min-width: 768px)  { .play img { width: 33.33%; } }
+  @media (min-width: 992px)  { .play img { width: 25%; } }
+  @media (min-width: 1200px) { .play img { width: 20%; } }
