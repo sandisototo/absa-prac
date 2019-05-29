@@ -1,0 +1,32 @@
+.main-tile {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    min-height: 220px;
+    background: #2e2c2c url(assets/placeholder.png) center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+    width: 12rem;
+    height: 224px;
+    min-height: 300px;
+
+    
+}
+
+.main-tile .card-title {
+    position: relative;
+    top: 40%;
+    font-size: 26px;
+    text-align: center;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: -25px;
+    color: black;
+    text-align: left;
+    left: 0;
+}

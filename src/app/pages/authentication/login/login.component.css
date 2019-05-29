@@ -89,34 +89,6 @@
     text-align: center;
   }
   
-  /* .login-sec .copy-text i {
-    color: $vilotecolor;
-  }
-  
-  .login-sec .copy-text a {
-    color: $vilotecolor;
-  }
-  
-  .login-sec h2 {
-    margin-bottom: 30px;
-    font-weight: 800;
-    font-size: 30px;
-    color: $vilotecolor;
-  }
-  
-  .login-sec h2:after {
-    content: " ";
-    width: 100px;
-    height: 5px;
-    background: $vilotecolor;
-    display: block;
-    margin-top: 8px;
-    border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto
-  } */
-  
-  
   .banner-text {
     width: 70%;
     position: absolute;
@@ -308,7 +280,16 @@
   .bg3 {
     background-color: #ea4335;
   }
-  
+
+.login-img {  
+  max-width: 50%;
+  float: none;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  top: 1em;
+  position: relative;
+}
   
   
   

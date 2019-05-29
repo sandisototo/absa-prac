@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { AuthenticationService, LocalStorageService } from '@app/core';
+import { AuthenticationService, LocalStorageService, HelperService } from '@app/core';
 import { SeriesService } from '@app/core/service/series-service';
 
 const credentialsKey = 'credentials';
@@ -11,12 +11,14 @@ const credentialsKey = 'credentials';
 export class SeriesComponent implements OnInit, AfterViewInit {
   private _credentials: Authentication.Credentials | null;
   private _series: any = [];
+  title: string = 'Popular Series';
 
   constructor(
     private auth: AuthenticationService,
     private localStorageService: LocalStorageService,
     private seriesService: SeriesService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private helperService: HelperService
   ) {
     const savedCredentials = this.localStorageService.getItem(credentialsKey);
     if (savedCredentials) {
@@ -35,15 +37,23 @@ export class SeriesComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.getSeries();
 
-    this._series = JSON.parse(JSON.stringify(this._series).split('"Poster Art":').join('"posterArt":'));
+    this._series = this.helperService.prepareProperty(this._series, 'Poster Art', 'posterArt');
 
     this.cd.detectChanges();
   }
-
 
   private getSeries() {
     this.seriesService.getSeries().subscribe((v) => {
       this._series = v.length ? v : [];
     });
   }
+
+  hoverin(id:any) {
+    id = document.getElementById(id);
+    id.classList.add('show');
+   }
+   hoverout(id:any) {
+    id = document.getElementById(id);
+    id.classList.remove('show');
+   }
 }

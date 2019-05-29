@@ -1,17 +1,25 @@
-<nav class="navbar navbar-light bg-black">
-    <p class="navbar-brand">
-        Popular Series
-    </p>
-</nav>
+<app-header [title]="title"></app-header>
 <div class="container main">
-    <div class="row" *ngIf="_series else loading">
-        <div class="col-xs-6 col-md-12 play">
-            <a href="#" *ngFor="let item of _series;">
-                <img src="{{item.images.posterArt.url}}" alt="{{item.images.title}}">
-            </a>
+    <div class="row">
+        <div class="card-group" *ngIf="_series else loading">
+
+            <div class="card" id="{{item.title}}" *ngFor="let item of _series;" (mouseover)="hoverin(item.title)"
+                (mouseout)="hoverout(item.title)">
+                <a href="#">
+                    <img class="card-img-top" src="{{item.images.posterArt.url}}" alt="{{item.images.title}}">
+                </a>
+                <div class="card-footer">
+                    <p class="card-text"></p>
+                    <div class="cover">
+                        <h3 class="card-title">{{item.title}}</h3>
+                    </div>
+                    <p class="card-text">
+                        <span class="card-author">{{item.description}}</span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-
     <ng-template #loading>
         <div>Loading...</div>
     </ng-template>

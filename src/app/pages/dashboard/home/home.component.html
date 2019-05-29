@@ -1,26 +1,18 @@
-<nav class="navbar navbar-light bg-black">
-        <p class="navbar-brand">
-                Popular Titles
-            </p>
-      </nav> 
-<b>Hi, {{_credentials.data.name}}!</b>
+
+<app-header [title]="title"></app-header>
 <div class="container main">
     <div class="row">
         <div class="card-deck">
-            <div class="card tile" style="width: 18rem;" routerLink="/series">
-                <img class="card-img-top" src="https://via.placeholder.com/150C/O https://placeholder.com/" height="90"
-                                alt="Card image cap">
+            <div class="card main-tile" routerLink="/series">
                 <div class="card-body">
-                    <h5 class="card-title">Popular Series</h5>
-                    <p class="card-text">Click to checkout!</p>
+                    <h5 class="card-title">SERIES</h5>
+                    <p class="card-text">Popular Series</p>
                 </div>
             </div>
-            <div class="card tile" style="width: 18rem;" routerLink="/movies">
-                    <img class="card-img-top" src="https://via.placeholder.com/150C/O https://placeholder.com/" height="90"
-                        alt="Card image cap">
+            <div class="card main-tile" routerLink="/movies">
                     <div class="card-body">
-                        <h5 class="card-title">Popular Movies</h5>
-                        <p class="card-text">Click to checkout!</p>
+                        <h5 class="card-title">MOVIES</h5>
+                        <p class="card-text">Popular Movies</p>
                     </div>
                 </div>
         </div>

@@ -14,7 +14,7 @@ export const AppRoutes: Routes = [
         path: '',
         redirectTo: '/home',
         pathMatch: 'full',
-        canActivate: [AuthenticationGuard],
+        // canActivate: [AuthenticationGuard],
       },
       {
         path: 'home',
@@ -30,7 +30,7 @@ export const AppRoutes: Routes = [
         path: 'movies',
         redirectTo: '/movies',
         pathMatch: 'full',
-        canActivate: [AuthenticationGuard],
+        // canActivate: [AuthenticationGuard],
       },
       {
         path: 'movies',
@@ -46,7 +46,7 @@ export const AppRoutes: Routes = [
         path: 'series',
         redirectTo: '/series',
         pathMatch: 'full',
-        canActivate: [AuthenticationGuard],
+        // canActivate: [AuthenticationGuard],
       },
       {
         path: 'series',

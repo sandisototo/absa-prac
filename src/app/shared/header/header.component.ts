@@ -1,7 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -12,11 +9,9 @@ export class HeaderComponent implements OnInit {
   @Input()
   layout: any;
   pageInfo: any;
+  @Input() title: string;
 
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private titleService: Title
-  ) {}
-  ngOnInit() {}
+  constructor() { }
+  
+  ngOnInit() { }
 }

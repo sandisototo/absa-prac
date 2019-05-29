@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   resetPasswordForm: FormGroup;
   isLoading = false;
+  onError: boolean;
   constructor(
     public router: Router,
     private formBuilder: FormBuilder,
@@ -54,6 +55,7 @@ export class LoginComponent implements OnInit {
           }
         },
         (error: any) => {
+          this.onError = true;
           console.log(`Login error: ${error}`);
         }
       );

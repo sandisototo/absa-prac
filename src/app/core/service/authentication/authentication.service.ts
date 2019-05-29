@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable, EventEmitter } from '@angular/core';
-import { Observable, of, Subject, BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { LocalStorageService } from '@app/core/service/local-storage.service';
@@ -71,8 +71,6 @@ export class AuthenticationService {
    * @return {boolean} True if the user is authenticated.
    */
   isAuthenticated(): boolean {
-    console.log('!!this.credentials--->', !!this.credentials);
-    console.log('this.credentials--->', this.credentials);
     return !!this.credentials;
   }
 

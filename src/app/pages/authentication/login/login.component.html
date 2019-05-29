@@ -1,4 +1,5 @@
 <section class="login-block">
+    <p style="color: #000" *ngIf="onError">Oops, something went wrong...</p>
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
@@ -51,7 +52,7 @@
       </div>
       <div class="col-md-8 banner-sec">
         <div class="signup__overlay">
-            <img style="max-width: 50%;" src="assets/images/absa-logo-round.svg"/>
+            <img class="login-img" src="assets/images/absa-logo-round.svg"/>
         </div>
       </div>
     </div>

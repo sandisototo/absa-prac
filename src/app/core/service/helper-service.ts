@@ -20,5 +20,9 @@ export class HelperService {
             }        
         }
     }
+
+    prepareProperty(arr: any, property: string, replacement: string) {
+        return JSON.parse(JSON.stringify(arr).split(`"${property}":`).join(`"${replacement}":`));
+    }
 }
 

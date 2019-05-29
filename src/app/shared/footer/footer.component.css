@@ -1,5 +1,10 @@
 .footer {
   color: white;
-  height: 120px;
-  margin-top:2rem;
+  height: auto;
+  margin-top: 2rem;
+  padding-bottom: 1em;
+}
+
+.footer a {
+  color: white;
 }
